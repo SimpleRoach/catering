@@ -1,10 +1,11 @@
 from django.urls import path
-from . import views
+from Сatering import settings
+from . import views as main_menu_views
 from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('', views.index, name='main'),
+    path('', main_menu_views.main_menu, name='main'),
 ]
 
 if settings.DEBUG:
