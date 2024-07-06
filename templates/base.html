@@ -9,15 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="В слайдере можно использовать изображения и текст. В контенте страницы добавлены некоторые новые компоненты.">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
     <title>Carousel Template for Bootstrap</title>
 
-    <!-- Bootstrap core CSS -->
+
     <link href="{% static 'main_menu/css/bootstrap.min.css' %}" rel="stylesheet">
-    <!-- Custom styles for this template -->
     <link href="{% static 'main_menu/css/carousel.css' %}" rel="stylesheet">
   </head>
+  
+  
 <!-- NAVBAR
 ================================================== -->
   <body>
@@ -76,8 +76,6 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>Example headline.</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
             </div>
           </div>
         </div>
@@ -192,8 +190,9 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-
+    <script src="{% static 'main_menu/js/jquery.min.js' %}"></script>
     <script src="{% static 'main_menu/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'main_menu/js/docs.min.js' %}"></script>
 
   </body>
 </html>
