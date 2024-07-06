@@ -9,4 +9,6 @@ def main_menu(request):
     return render(
         request,
         'main_menu/home.html',
+        data
+
     )
