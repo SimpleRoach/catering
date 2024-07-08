@@ -8,7 +8,7 @@ def index(request):
     }
     return render(
         request,
-        'main_menu/home.html',
+        'main_menu/index.html',
         data
     )
 
@@ -17,5 +17,5 @@ def about(request):
         'title': 'О нас',
     }
     return render(request,
-                  'main_menu/home.html',
+                  'main_menu/index.html',
                   data)
