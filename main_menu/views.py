@@ -9,13 +9,15 @@ def index(request):
     return render(
         request,
         'main_menu/index.html',
-        data
+        context=data,
     )
 
 def about(request):
     data = {
         'title': 'О нас',
     }
-    return render(request,
-                  'main_menu/index.html',
-                  data)
+    return render(
+        request,
+        'main_menu/index.html',
+        context=data,
+    )
