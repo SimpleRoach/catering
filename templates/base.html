@@ -10,21 +10,44 @@
     <link rel="stylesheet" href="{% static 'main_menu/css/base.css' %}">
 </head>
 <body>
- <header class="main-header">
-    <div class="container">
-      <div>
-      </div>
-      <nav class="head">
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">О нас</a></li>
-          <li><a href="#">Услуги</a></li>
-          <li><a href="#">Контакты</a></li>
-          <li><a href="#">Акции</a></li>
-          <li><a href="#">Вход</a></li>
-          <li><a href="#">Регистрация</a></li>
-      </nav>
+{#ШАПКА#}
+<nav class="navbar-header">
+    <div class="container-fluid">
+        
+
+        {# Кнопки   #}
+        <header align="center">
+            <a class="navbar-brand" href="#"><h2>R.Catering</h2></a>
+            <ul class="navbar-nav">
+
+                <li>
+                    <a class="navbar-brand" href="#">Меню</a>
+                </li>
+                <li>
+                    <a class="navbar-brand" href="#">О нас</a>
+                </li>
+                <li>
+                    <a class="navbar-brand" href="#">Услуги</a>
+                </li>
+                <li>
+                    <a class="navbar-brand" href="#">Акции</a>
+                </li>
+            </ul>
+{# Кнопки справа сверху, которые типа то есть, то нет в зависимости от авторизации пользователя #}
+                <ul>
+                    <li>
+                        <a class="navbar-brand" href="#">Регистрация</a>
+                    </li>
+                    <li>
+                        <a class="navbar-brand" href="#">Войти</a>
+                    </li>
+                </ul>
+
+            
+        </header>
     </div>
-  </header>
+</nav>
+
 {% block content %}
 {% endblock %}
 </body>

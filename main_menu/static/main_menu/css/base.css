@@ -1,13 +1,9 @@
-.main-header {
-  background-color: #c2c2c2;
-  display: flex;
-  max-width: 100%;
-  margin: 0 auto;
+.navbar-header{
+  background: linear-gradient(#ccceb0, rgba(170, 64, 176, 0.82));
 }
 
-.container {
-  padding: 0 10px;
-  flex-grow: 1;
+a{
+  text-decoration: none;
+  font-size:20px;
+  color: #000000;
 }
-
-
