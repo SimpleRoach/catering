@@ -1,12 +1,13 @@
-header {
-  background-color: #f0f0f0;
-  padding: 20px;
+.main-header {
+  background-color: #c2c2c2;
+  padding: 30px;
   position: relative;
+  display: flex;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .container {
-  max-width: 1000px;
-  margin: 0 auto;
   padding: 0 20px;
 }
 
@@ -18,9 +19,6 @@ h1 {
   margin: 0;
 }
 
-nav {
-  float: right;
-}
 
 nav ul {
   list-style: none;
@@ -35,7 +33,7 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: #333;
+  color: #000000;
 }
 
 .actions {
@@ -47,9 +45,9 @@ nav a {
 .btn {
   display: inline-block;
   padding: 8px 16px;
-  background-color: #446051;
-  color: white;
+  background-color: none;
+  color: #000000;
   text-decoration: none;
   border: none;
-  border-radius: 50px;
+  border-radius: 1px;
 }
