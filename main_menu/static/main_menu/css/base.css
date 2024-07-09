@@ -1,9 +1,29 @@
 .navbar-header{
-  background: linear-gradient(#ccceb0, rgba(170, 64, 176, 0.82));
+  background: linear-gradient(#e3c9a0, rgb(243, 193, 219));
+  border-radius: 8px;
 }
 
-a{
+.navbar-wrap{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.navbar-nav1{
+  list-style: none;
+  margin-right: 100px;
+}
+
+.navbar-nav2{
+  list-style: none;
+  margin-right: 1px;
+}
+
+.navbar-brand{
   text-decoration: none;
-  font-size:20px;
+  font-size:25px;
   color: #000000;
+}
+
+li{
+  display: inline-flex;
 }

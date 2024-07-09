@@ -10,43 +10,38 @@
     <link rel="stylesheet" href="{% static 'main_menu/css/base.css' %}">
 </head>
 <body>
-{#ШАПКА#}
-<nav class="navbar-header">
-    <div class="container-fluid">
+{# ШАПКА #}
+
         
-
-        {# Кнопки   #}
-        <header align="center">
-            <a class="navbar-brand" href="#"><h2>R.Catering</h2></a>
-            <ul class="navbar-nav">
-
-                <li>
-                    <a class="navbar-brand" href="#">Меню</a>
-                </li>
-                <li>
-                    <a class="navbar-brand" href="#">О нас</a>
-                </li>
-                <li>
-                    <a class="navbar-brand" href="#">Услуги</a>
-                </li>
-                <li>
-                    <a class="navbar-brand" href="#">Акции</a>
-                </li>
-            </ul>
-{# Кнопки справа сверху, которые типа то есть, то нет в зависимости от авторизации пользователя #}
-                <ul>
-                    <li>
-                        <a class="navbar-brand" href="#">Регистрация</a>
-                    </li>
-                    <li>
-                        <a class="navbar-brand" href="#">Войти</a>
-                    </li>
-                </ul>
-
-            
-        </header>
+<header class="navbar-header" align="center">
+    <a class="navbar-brand" href="#"><h2>R.Catering</h2></a>
+    <div class="navbar-wrap">
+        <ul class="navbar-nav1">
+        {# Кнопки #}
+            <li>
+                <a class="navbar-brand" href="#">Меню</a>
+            </li>
+            <li>
+                <a class="navbar-brand" href="#">О нас</a>
+            </li>
+            <li>
+                <a class="navbar-brand" href="#">Услуги</a>
+            </li>
+            <li>
+                <a class="navbar-brand" href="#">Акции</a>
+            </li>
+        </ul>
+    {# Кнопки справа сверху, которые типа то есть, то нет в зависимости от авторизации пользователя #}
+        <ul class="navbar-nav2">
+            <li>
+                <a class="navbar-brand" href="#">Регистрация</a>
+            </li>
+            <li>
+                <a class="navbar-brand" href="#">Войти</a>
+            </li>
+        </ul>
     </div>
-</nav>
+</header>
 
 {% block content %}
 {% endblock %}
