@@ -12,3 +12,6 @@ def catalog(request):
         'dishes/catalog.html',
         context=data,
     )
+
+def products(request):
+    pass

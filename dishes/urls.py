@@ -7,6 +7,7 @@ app_name = 'dishes'
 
 urlpatterns = [
     path('', dishes_views.catalog, name='catalog'),
+    path('product/', dishes_views.product, name='product'),
 ]
 
 if settings.DEBUG:
