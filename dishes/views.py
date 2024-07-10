@@ -13,5 +13,5 @@ def catalog(request):
         context=data,
     )
 
-def products(request):
+def product(request):
     pass
