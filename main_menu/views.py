@@ -18,6 +18,6 @@ def about(request):
     }
     return render(
         request,
-        'main_menu/index.html',
+        'main_menu/about.html',
         context=data,
     )

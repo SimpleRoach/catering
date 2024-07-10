@@ -12,19 +12,19 @@
 <body>
 {# ШАПКА #}
 
-        
+
 <header class="navbar-header" align="center">
     <div class="navbar-wrap">
         <ul class="navbar-nav1">
             <li>
-                <a class="navbar-brand" href="#"><h2>R.Catering</h2></a>
+                <a class="navbar-brand" href="{% url 'index' %}"><h2>R.Catering</h2></a>
             </li>
         {# Кнопки #}
             <li>
                 <a class="navbar-brand" href="#">Меню</a>
             </li>
             <li>
-                <a class="navbar-brand" href="#">О нас</a>
+                <a class="navbar-brand" href="{% url 'about' %}">О нас</a>
             </li>
             <li>
                 <a class="navbar-brand" href="#">Услуги</a>
