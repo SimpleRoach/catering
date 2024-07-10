@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'main_menu.apps.MainMenuConfig',
+    'dishes.apps.DishesConfig',
 ]
 
 MIDDLEWARE = [
