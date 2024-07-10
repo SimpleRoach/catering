@@ -3,6 +3,7 @@ from Сatering import settings
 from . import views as main_menu_views
 from django.conf.urls.static import static
 
+app_name = 'main_menu'
 
 urlpatterns = [
     path('', main_menu_views.index, name='index'),
