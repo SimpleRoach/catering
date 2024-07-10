@@ -14,4 +14,11 @@ def catalog(request):
     )
 
 def product(request):
-    pass
+    data = {
+        'title': 'О товаре',
+    }
+    return render(
+        request,
+        'dishes/product.html',
+        context=data,
+    )
