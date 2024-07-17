@@ -1,11 +1,13 @@
 from django.shortcuts import render
-
+from .models import Categories
 
 
 # Create your views here.
 def catalog(request):
+    categories = Categories.objects.all()
     data = {
-        'title': 'Каталог',
+        'title' : 'Каталог',
+        'categories' : categories
     }
     return render(
         request,
