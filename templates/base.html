@@ -24,11 +24,14 @@
 
         {# Кнопки #}
             <li class="dropdown">
-                <a class="navbar-brand dropdown-toggle" href="#" id="menuDropdown" onclick="toggleDropdown()">Меню</a>
+                <a class="navbar-brand dropdown-toggle dropdown-item" href="#" id="menuDropdown" onclick="toggleDropdown()">Меню</a>
                 <div class="dropdown-menu" id="menuDropdownMenu">
-                    <a class="dropdown-item" href="{% url 'dishes:catalog' %}">Всё меню</a>
                     {% for category in categories %}
-                        <a class="dropdown-item" href="#">{{ category.name }}</a>
+                        {% if category.name == 'Всё меню' %}
+                        	<a class="dropdown-item" href="{% url 'dishes:catalog' %}">{{ category.name }}</a>
+                        {% endif %} 
+                        <a class="dropdown-item" href="">{{ category.name }}</a>
+
                     {% endfor %}
                 </div>
             </li>
