@@ -19,18 +19,17 @@
     <div class="navbar-wrap">
         <ul class="navbar-nav1">
             <li>
-
                 <a class="navbar-brand" href="{% url 'main_menu:index' %}"><h2>R.Catering</h2></a>
-                
             </li>
+
         {# Кнопки #}
             <li class="dropdown">
                 <a class="navbar-brand dropdown-toggle" href="#" id="menuDropdown" onclick="toggleDropdown()">Меню</a>
                 <div class="dropdown-menu" id="menuDropdownMenu">
                     <a class="dropdown-item" href="{% url 'dishes:catalog' %}">Всё меню</a>
-                    <a class="dropdown-item" href="#">Категория 1</a>
-                    <a class="dropdown-item" href="#">Категория 2</a>
-                    <a class="dropdown-item" href="#">Категория 3</a>
+                    {% for category in categories %}
+                        <a class="dropdown-item" href="#">{{ category.name }}</a>
+                    {% endfor %}
                 </div>
             </li>
             <li>
