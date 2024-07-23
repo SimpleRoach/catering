@@ -14,13 +14,3 @@ class CatalogListView(ListView):
         'title' : 'Каталог',
         'categories': categories
     }
-
-def product(request):
-    data = {
-        'title': 'О товаре',
-    }
-    return render(
-        request,
-        'dishes/product.html',
-        context=data,
-    )
