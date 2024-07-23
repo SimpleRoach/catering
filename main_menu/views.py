@@ -10,12 +10,8 @@ class IndexView(TemplateView):
         'title': 'Главная страница',
     }
 
-def about(request):
-    data = {
+class AboutView(TemplateView):
+    template_name = 'main_menu/about.html'
+    extra_context = {
         'title': 'О нас',
     }
-    return render(
-        request,
-        'main_menu/about.html',
-        context=data,
-    )

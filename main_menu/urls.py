@@ -7,7 +7,7 @@ app_name = 'main_menu'
 
 urlpatterns = [
     path('', main_menu_views.IndexView.as_view(), name='index'),
-    path('about/', main_menu_views.about, name='about'),
+    path('about/', main_menu_views.AboutView.as_view(), name='about'),
 ]
 
 if settings.DEBUG:
