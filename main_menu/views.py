@@ -1,16 +1,14 @@
 from django.shortcuts import render
+from django.views.generic import TemplateView
 
 
 # Create your views here.
-def index(request):
-    data = {
+
+class IndexView(TemplateView):
+    template_name = 'main_menu/index.html'
+    extra_context = {
         'title': 'Главная страница',
     }
-    return render(
-        request,
-        'main_menu/index.html',
-        context=data,
-    )
 
 def about(request):
     data = {
