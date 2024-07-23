@@ -1,17 +1,14 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 
-
+from .utils import DataMixin
 # Create your views here.
 
-class IndexView(TemplateView):
+class IndexView(DataMixin, TemplateView):
     template_name = 'main_menu/index.html'
-    extra_context = {
-        'title': 'Главная страница',
-    }
+    title_page = 'Главная страница'
 
-class AboutView(TemplateView):
+
+class AboutView(DataMixin, TemplateView):
     template_name = 'main_menu/about.html'
-    extra_context = {
-        'title': 'О нас',
-    }
+    title_page = 'О нас'
