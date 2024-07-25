@@ -36,7 +36,10 @@
                     {% for category in categories %}
                         {% if category.name == 'Всё меню' %}
                         	<a class="dropdown-item" href="{% url 'dishes:catalog' %}">{{ category.name }}</a>
-                        {% else %}
+                        {% endif %}
+                    {% endfor %}
+                    {% for category in categories %}
+                        {% if category.name != 'Всё меню' %}
                             <a class="dropdown-item" href="">{{ category.name }}</a>
                         {% endif %}
                     {% endfor %}

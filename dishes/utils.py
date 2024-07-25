@@ -1,6 +1,7 @@
 from dishes.models import Categories
 
 
+# Вечная весна
 class DataMixin:
     title_page = None
     extra_context = {}
