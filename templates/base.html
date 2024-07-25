@@ -26,7 +26,12 @@
 
         {# Кнопки #}
             <li class="dropdown">
-                <a class="navbar-brand dropdown-toggle dropdown-item" href="#" id="menuDropdown" onclick="toggleDropdown()">Меню</a>
+                <a 
+                        class="navbar-brand dropdown-toggle dropdown-item"
+                        href="#" 
+                        id="menuDropdown" 
+                        onclick="toggleDropdown()">Меню
+                </a>
                 <div class="dropdown-menu" id="menuDropdownMenu">
                     {% for category in categories %}
                         {% if category.name == 'Всё меню' %}
