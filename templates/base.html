@@ -8,10 +8,18 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {# Блок title #}
     <title>{% block title %}{% endblock %}</title>
+    {#Конец блока title #}
+
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    {% block extra_css %}   
+
+    {# Блок CSS #}
+    {% block extra_css %}
     {% endblock %}
+    {# Конец блока CSS #}
+
 </head>
 <body>
 {# ШАПКА #}
@@ -26,24 +34,19 @@
 
         {# Кнопки #}
             <li class="dropdown">
-                <a 
+                <a
                         class="navbar-brand dropdown-toggle dropdown-item"
-                        href="#" 
-                        id="menuDropdown" 
+                        href="#"
+                        id="menuDropdown"
                         onclick="toggleDropdown()">Меню
                 </a>
+
+                {# Выпадающее меню #}
                 <div class="dropdown-menu" id="menuDropdownMenu">
-                    {% for category in categories %}
-                        {% if category.name == 'Всё меню' %}
-                        	<a class="dropdown-item" href="{% url 'dishes:catalog' %}">{{ category.name }}</a>
-                        {% endif %}
-                    {% endfor %}
-                    {% for category in categories %}
-                        {% if category.name != 'Всё меню' %}
-                            <a class="dropdown-item" href="">{{ category.name }}</a>
-                        {% endif %}
-                    {% endfor %}
+                    {% show_drop_categories %}
                 </div>
+                {# Конец выпадающего меню#}
+
             </li>
             <li>
                 <a class="navbar-brand" href="{% url 'main_menu:about' %}">О нас</a>
@@ -67,10 +70,17 @@
     </div>
 </header>
 
+{# Контнент #}
 {% block content %}
 {% endblock %}
+{# Конец контента #}
+
 <script src="{% static 'js/base.js' %}"></script>
+
+{# Блок JS #}
 {% block extra_js %}
 {% endblock %}
+{# Конец блока JS #}
+
 </body>
 </html>

@@ -11,3 +11,9 @@ class CatalogListView(DataMixin, ListView):
     template_name = 'dishes/catalog.html'
     context_object_name = 'categories'
     title_page = 'Каталог'
+
+    def get_context_data(self, **kwargs):
+        # Получаем базовый контекст от ListView
+        context = super().get_context_data(**kwargs)
+        # Добавляем контекст из DataMixin
+        return self.get_context_data(**context)
