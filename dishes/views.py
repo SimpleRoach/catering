@@ -16,4 +16,5 @@ class CatalogListView(DataMixin, ListView):
         # Получаем базовый контекст от ListView
         context = super().get_context_data(**kwargs)
         # Добавляем контекст из DataMixin
-        return self.get_context_data(**context)
+        context = DataMixin.get_context_data(self, **context)
+        return context
