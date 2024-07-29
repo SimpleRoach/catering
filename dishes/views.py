@@ -1,4 +1,4 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 from django.views.generic import ListView
 
 from .models import Categories
@@ -11,10 +11,9 @@ class CategoryCatalogListView(DataMixin, ListView):
     template_name = 'dishes/category_catalog.html'
     context_object_name = 'categories'
     title_page = 'Каталог'
+    slug_url_kwarg = 'post_slug'
 
     def get_context_data(self, **kwargs):
-        # Получаем базовый контекст от ListView
         context = super().get_context_data(**kwargs)
-        # Добавляем контекст из DataMixin
-        context = DataMixin.get_context_data(self, **context)
-        return context
+        return self.get_mixin_context(context, title=self.title_page)
+
