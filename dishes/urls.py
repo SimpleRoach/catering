@@ -6,8 +6,8 @@ from django.conf.urls.static import static
 app_name = 'dishes'
 
 urlpatterns = [
-    path('', dishes_views.CategoryCatalogListView.as_view(), name='catalog'),
-    # path('/<slug:cat_slug>/>', dishes_views.CatalogDetailView.as_view(), name='catalog-detail'),
+    path('', dishes_views.CategoryCatalogListView.as_view(), name='category_catalog'),
+    # path('/<slug:category_slug>/>', dishes_views.__!!!__.as_view(), name='category-detail'),
 ]
 
 if settings.DEBUG:

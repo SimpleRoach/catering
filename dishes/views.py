@@ -11,7 +11,7 @@ class CategoryCatalogListView(DataMixin, ListView):
     template_name = 'dishes/category_catalog.html'
     context_object_name = 'categories'
     title_page = 'Каталог'
-    slug_url_kwarg = 'post_slug'
+    # slug_url_kwarg = 'post_slug'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
