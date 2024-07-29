@@ -1,1 +1,5 @@
-from dishes.utils import DataMixin
+from dishes.models import Categories
+
+def categories_processor(request):
+    categories = Categories.objects.all()
+    return {'categories': categories}
