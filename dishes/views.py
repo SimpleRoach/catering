@@ -6,9 +6,9 @@ from .utils import DataMixin
 
 
 # Create your views here.
-class CatalogListView(DataMixin, ListView):
+class CategoryCatalogListView(DataMixin, ListView):
     model = Categories
-    template_name = 'dishes/catalog.html'
+    template_name = 'dishes/category_catalog.html'
     context_object_name = 'categories'
     title_page = 'Каталог'
 
