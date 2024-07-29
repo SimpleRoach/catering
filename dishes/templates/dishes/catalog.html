@@ -14,20 +14,19 @@
     <h1>Каталог товаров</h1>
 
     <div class="category" id="category-1">
-        <div class="category-content">
-            <h2>Категория 1</h2>
-        </div>
+
+
+            {% for category in categories %}
+                {% if category.name != 'Всё меню' %}
+                    <div class="category-content">
+                        <a class="dropdown-item" href="">{{ category.name }}</a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+
     </div>
-    <div class="category" id="category-2">
-        <div class="category-content">
-            <h2>Категория 2</h2>
-        </div>
-    </div>
-    <div class="category" id="category-3">
-        <div class="category-content">
-            <h2>Категория 3</h2>
-        </div>
-    </div>
+
 {% endblock %}
 
 {% block extra_js %}
