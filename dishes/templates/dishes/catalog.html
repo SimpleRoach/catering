@@ -13,18 +13,16 @@
     <h1>Привет со страницы Каталога!!!</h1>
     <h1>Каталог товаров</h1>
 
-    <div class="category" id="category-1">
-
-
-            {% for category in categories %}
-                {% if category.name != 'Всё меню' %}
+    <div class="category-list">
+        {% for category in categories %}
+            {% if category.name != 'Всё меню' %}
+                <div class="category" style="background-image: url('{{ category.image.url }}');">
                     <div class="category-content">
-                        <a class="dropdown-item" href="">{{ category.name }}</a>
+                        <a class="dropdown-item" href="#">{{ category.name }}</a>
                     </div>
-                {% endif %}
-            {% endfor %}
-
-
+                </div>
+            {% endif %}
+        {% endfor %}
     </div>
 
 {% endblock %}
