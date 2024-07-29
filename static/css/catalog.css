@@ -17,8 +17,14 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0; /* Начальное значение для анимации */
-    transition: opacity 1s; /* Плавный переход */
+    opacity: 1; /* Устанавливаем видимость сразу */
+    /* Удаляем переходы, если они были */
+}
+
+.category img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Сохранение соотношения сторон изображения */
 }
 
 .category-content {
@@ -31,4 +37,11 @@
 
 .category h2 {
     font-size: 2em;
+}
+
+.category a {
+    font-size: 1.5em; /* Увеличение размера шрифта */
+    font-weight: bold; /* Жирный шрифт */
+    color: white; /* Цвет шрифта */
+    text-decoration: none; /* Убираем подчеркивание */
 }

@@ -16,7 +16,8 @@
     <div class="category-list">
         {% for category in categories %}
             {% if category.name != 'Всё меню' %}
-                <div class="category" style="background-image: url('{{ category.image.url }}');">
+                <div class="category">
+                    <img src="{{ category.image.url }}" alt="{{ category.name }}">
                     <div class="category-content">
                         <a class="dropdown-item" href="#">{{ category.name }}</a>
                     </div>
