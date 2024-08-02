@@ -1,7 +1,7 @@
 # from django.shortcuts import render
 from django.views.generic import ListView
 
-from .models import Categories
+from .models import Categories, Products
 from .utils import DataMixin
 
 # Create your views here.
@@ -19,4 +19,7 @@ class CategoryCatalogListView(DataMixin, ListView):
 
 class DishesByCategoryCatalogListView(DataMixin, ListView):
     slug_url_kwarg = 'dishes_catrgory_slug'
-    pass
+    model = Products
+    tamplate_name = 'dishes_category_catalog.html'
+    context_object_name = 'dishes'
+    title_page = ''
